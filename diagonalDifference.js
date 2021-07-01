@@ -5,17 +5,29 @@ const diagonalDifference = (
         [10, 8, -12]
     ]
 ) => {
-    const soma = (a, b) => a + b;
+    const soma = (diagonal) => {
+        let soma = 0;
+        for (const number of diagonal) {
+            soma += number
+        }
+        return soma;
+    }
     const primaryDiagonal = [];
     const secondaryDiagonal = [];
+    const comprimentoTotal = arr.length
 
-    primaryDiagonal.push(arr[0][0], arr[1][1], arr[2][2]);
-    secondaryDiagonal.push(arr[0][2], arr[1][1], arr[2][0]);
+    for (let lin = 0; lin < comprimentoTotal; lin++) {
+        for (let col = 0; col < comprimentoTotal; col++) {
+            if (lin === col) primaryDiagonal.push(arr[lin][col])
+            if (lin + col === comprimentoTotal - 1) secondaryDiagonal.push(arr[lin][col])
+        }
+    }
 
-    const primaryResult = primaryDiagonal.reduce(soma);
-    const secondaryResult = secondaryDiagonal.reduce(soma);
+    const primaryResult = soma(primaryDiagonal);
+    const secondaryResult = soma(secondaryDiagonal);
 
     return Math.abs(primaryResult - secondaryResult);
+
 }
 
-diagonalDifference()
+console.log(diagonalDifference())
