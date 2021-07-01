@@ -1,7 +1,7 @@
 const plusMinus = (
-    arr = [1, 1, 0, -1, -1]
+    arr = [-4, 3, -9, 0, 4, 1,]
 ) => {
-    const comprimentoTotal = arr.length
+    const comprimentoTotal = arr.length;
     let [pos, neg, zer] = [[], [], []];
     let propPos, propNeg, propZer;
 
@@ -17,6 +17,8 @@ const plusMinus = (
     propNeg = neg.length / comprimentoTotal;
     propZer = zer.length / comprimentoTotal;
 
-    return propPos.toFixed(6), propNeg.toFixed(6), propZer.toFixed(6);
+    console.log(propPos.toFixed(6));
+    console.log(propNeg.toFixed(6));
+    console.log(propZer.toFixed(6));
 }
-plusMinus()
+plusMinus();
