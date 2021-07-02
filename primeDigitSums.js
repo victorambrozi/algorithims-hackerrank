@@ -1,0 +1,5 @@
+const primeDigitSums = (n) => {
+
+}
+
+primeDigitSums();
