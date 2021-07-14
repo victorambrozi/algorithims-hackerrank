@@ -14,12 +14,12 @@ const diagonalDifference = (
     }
     const primaryDiagonal = [];
     const secondaryDiagonal = [];
-    const comprimentoTotal = arr.length
+    const comprimentoTotal = arr.length;
 
     for (let lin = 0; lin < comprimentoTotal; lin++) {
         for (let col = 0; col < comprimentoTotal; col++) {
-            if (lin === col) primaryDiagonal.push(arr[lin][col])
-            if (lin + col === comprimentoTotal - 1) secondaryDiagonal.push(arr[lin][col])
+            if (lin === col) primaryDiagonal.push(arr[lin][col]);
+            if (lin + col === comprimentoTotal - 1) secondaryDiagonal.push(arr[lin][col]);
         }
     }
 
